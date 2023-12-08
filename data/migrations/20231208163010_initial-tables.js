@@ -21,7 +21,7 @@ exports.up = async function (knex) {
             table.string('resource_description')
         })
         .createTable('tasks', table => {
-            table.increments()
+            table.increments('task_id')
             table.string('task_description')
                 .notNullable()
                 .defaultTo('Walk around the street')
