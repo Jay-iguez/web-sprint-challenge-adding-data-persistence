@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "migrate": "npx knex migrate:up",
+    "rollback": "npx knex migrate:rollback"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
     "supertest": "6.2.3"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "knex": "^3.1.0",
     "nodemon": "^3.0.2",

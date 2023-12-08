@@ -4,8 +4,9 @@ const resource = express.Router()
 
 resource.get('/', async (req, res, next) => {
     try {
+        const stuff = process.env.NODE_ENV
         res.status(200).json({
-            message: 'dog'
+            message: stuff
         })
     } catch(err) {
         err.status = 500
