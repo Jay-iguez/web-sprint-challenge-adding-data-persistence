@@ -7,7 +7,8 @@
     "server": "nodemon index.js",
     "start": "node index.js",
     "migrate": "npx knex migrate:up",
-    "rollback": "npx knex migrate:rollback"
+    "rollback": "npx knex migrate:rollback",
+    "resetdb": "npm run rollback && npm run migrate && npx knex seed:run"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "supertest": "6.2.3"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "knex": "^3.1.0",
     "knex-cleaner": "^1.3.1",
