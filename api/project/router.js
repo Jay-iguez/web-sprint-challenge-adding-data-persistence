@@ -22,7 +22,7 @@ project.post('/', async (req, res, next) => {
                 message: 'Make sure to include project_name!'
             })
         } else {
-            res.status(200).json(new_project)
+            res.status(201).json(new_project)
         }
     } catch (err) {
         res.status(500).json({
